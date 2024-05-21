@@ -1,4 +1,13 @@
 #!/bin/bash
+#Funnyvpn
+#Rerechan02
+#Rayzell25
+#Nuralfiya
+#em0zz
+#naravpn.com
+#indo-ssh.com
+#indossh
+#Skc
 clear
 #=========================================================================================================================
 
@@ -169,7 +178,7 @@ organizationalunit=funnvpn
 commonname=funnvpn
 email=nuralfiya@indo-ssh.com
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://github.com/Rerechan02/last/raw/main/password"
+wget -O /etc/pam.d/common-password "https://github.com/Trusty179/Izin/raw/main/INSTALL/password"
 chmod +x /etc/pam.d/common-password
 # go to root
 cd
@@ -235,8 +244,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/Rerechan02/last/main/nginx.conf
-wget -O /etc/nginx/conf.d/funnvpn.conf https://raw.githubusercontent.com/Rerechan02/last/main/funnvpn.conf
+wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/Trusty179/Izin/main/CONFIG/nginx.conf
+wget -O /etc/nginx/conf.d/funnvpn.conf https://raw.githubusercontent.com/Trusty179/Izin/main/CONFIG/funnvpn.conf
 sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/funnvpn.conf
 wget -O /var/www/html/index.html https://github.com/Rerechan02/Rerechan02.github.io/raw/main/index.html
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
@@ -252,19 +261,19 @@ wget -O /home/vps/public_html/index.html "https://github.com/Rerechan02/Rerechan
 cd /usr/bin
 rm -fr menu
 rm -fr /usr/sbin/menu
-wget https://raw.githubusercontent.com/Rerechan02/last/main/menu.zip
+wget https://raw.githubusercontent.com/Trusty179/Izin/main/menu.zip
 unzip funny.zip
 rm -fr funny.zip
 chmod +x *
 clear
 cd /usr/local/bin
-wget https://raw.githubusercontent.com/Rerechan02/last/main/ws.zip
+wget https://raw.githubusercontent.com/Trusty179/Izin/main/ws.zip
 unzip ws.zip
 rm -fr ws.zip
 chmod +x *
 chmod +x /usr/bin/*
 cd /etc/systemd/system
-wget https://raw.githubusercontent.com/Rerechan02/last/main/service.zip
+wget https://raw.githubusercontent.com/Trusty/Izin/main/service.zip
 unzip service.zip
 rm -fr service.zip
 systemctl daemon-reload
@@ -425,7 +434,7 @@ cd .acme.sh
 bash acme.sh --register-account -m rere@rerechan02.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
-wget -O /etc/xray/config.json https://raw.githubusercontent.com/Rerechan02/last/main/config.json
+wget -O /etc/xray/config.json https://raw.githubusercontent.com/Trusty179/Izin/main/CONFIG/config.json
 
 #ssl
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/funny.pem
